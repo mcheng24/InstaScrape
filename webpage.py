@@ -1,11 +1,14 @@
 #!/usr/bin/python3
 
 from collections import defaultdict
+from bs4 import BeautifulSoup
 
 class webpage:
     __init__(self, page):
         #original link
         self.link = ""
+        #raw text
+        self.raw = BeautifulSoup(html, 'html.parser').get_text()
         #instagram user
         self.user = ""
         #list of individual picture links
