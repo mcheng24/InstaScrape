@@ -24,7 +24,7 @@ class instaparse:
             captions.append(caption[0])
         #split into words
         for line in captions:
-            captionwords = re.findall(r"[\w']+", line)
+            captionwords = re.findall(r"\w+", line)
             for w in captionwords:
                 self.profile.words.append(w)
     def make_dictionary(self, words):

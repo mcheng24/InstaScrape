@@ -2,7 +2,8 @@
 from webpage import webpage
 from parser import instaparse
 
+url = input("Enter an instagram profile: ")
 if __name__ == "__main__":
-    page = webpage("https://www.instagram.com/mariekondo/")
+    page = webpage(url)
     p = instaparse(page)
     page.tostring()
